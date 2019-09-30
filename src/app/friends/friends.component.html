@@ -1,0 +1,4 @@
+<input type="text" #name><button (click)="addFriend(name)">Добавить друга</button>
+<ul *ngIf="friends.length > 0">
+  <li *ngFor="let friend of friends; let i = index" (click)="deleteFriend(i)">{{friend}}</li>
+</ul>

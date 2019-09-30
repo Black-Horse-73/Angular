@@ -1,0 +1,11 @@
+<div class="weather">
+  <h1>Прогноз погоды</h1>
+  <input type="number" #newTemp (keydown.enter)="changeTemp(newTemp.value)">
+  <p class="temp">{{temp}}</p>
+  <p class="state">{{state + " звёзды"}}</p>
+  <div>
+    <button (click)="cold()" [disabled]="temp <= -8">Холодней</button>
+    <button (click)="warm()" [disabled]="temp >= 38">Теплей</button>
+  </div>
+  <button (click)="theend()">Зима уже близко!!!</button>
+</div>
